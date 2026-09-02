@@ -6,7 +6,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     groq_api_key: str = Field(default="", alias="GROQ_API_KEY")
-    groq_model: str = Field(default="llama-3.3-70b-versatile", alias="GROQ_MODEL")
+    groq_model: str = Field(default="openai/gpt-oss-120b", alias="GROQ_MODEL")
     database_url: str = Field(default="", alias="DATABASE_URL")
     supabase_database_url: str = Field(default="", alias="SUPABASE_DATABASE_URL")
     query_row_limit: int = Field(default=1000, alias="QUERY_ROW_LIMIT")
